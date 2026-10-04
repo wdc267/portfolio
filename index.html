@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="王德才 · 后端工程师 / 全栈开发 · 求职面试作品集。Java · Spring Boot · MySQL · Redis，PFU 上海软件工程师。" />
+<meta name="author" content="王德才" />
+<meta name="theme-color" content="#0f0e0c" />
+
+<!-- Open Graph / social share -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="王德才 · Backend Engineer / Full-Stack Developer" />
+<meta property="og:description" content="Java · Spring Boot 工程师，专注后端架构与分布式数据一致性。" />
+<meta name="twitter:card" content="summary" />
+
+<title>王德才 · Backend Engineer / Full-Stack Developer</title>
+
+<!-- SVG favicon (inline data URI · amber mark on dark bg) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f0e0c'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='500' fill='%23d4a056' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts: Fraunces (display serif) + IBM Plex Mono (technical mono) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+<!-- ============ Grain overlay (global texture) ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ Top navigation ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo" aria-label="返回顶部">
+      <span class="nav__logo-mark">WD</span><span class="nav__logo-dot">.</span>
+    </a>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#about"      class="nav__link" data-num="01">About</a>
+      <a href="#education"  class="nav__link" data-num="02">Education</a>
+      <a href="#experience" class="nav__link" data-num="03">Experience</a>
+      <a href="#projects"   class="nav__link" data-num="04">Work</a>
+      <a href="#skills"     class="nav__link" data-num="05">Stack</a>
+      <a href="#contact"    class="nav__link nav__link--cta" data-num="06">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="hero__bg-num">2026 / PORTFOLIO</span>
+      <span class="hero__bg-line hero__bg-line--1"></span>
+      <span class="hero__bg-line hero__bg-line--2"></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__meta">
+        <span class="hero__tag">Available for hire · 2026 Spring</span>
+        <span class="hero__location">Shanghai · Remote-friendly</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__title-row reveal" style="--d:.05s">
+          <span class="hero__title-word">Wang</span>
+        </span>
+        <span class="hero__title-row reveal" style="--d:.15s">
+          <span class="hero__title-word hero__title-word--italic">Dé</span>
+          <span class="hero__title-word">Cai</span>
+        </span>
+      </h1>
+
+      <p class="hero__role reveal" style="--d:.35s">
+        Backend Engineer <span class="hero__role-sep">/</span> Full-Stack Developer
+      </p>
+
+      <p class="hero__lede reveal" style="--d:.45s">
+        Java · Spring Boot · MySQL · Redis 工程师，专注后端架构与分布式数据一致性，
+        拥有企业级扫描软件全量自动化测试框架的从 0 到 1 落地经验，
+        日常深度使用 AI 辅助编程工作流。
+      </p>
+
+      <div class="hero__actions reveal" style="--d:.55s">
+        <a href="#projects" class="btn btn--primary">
+          <span>查看项目经历</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span>联系我</span>
+        </a>
+      </div>
+
+      <!-- Key metrics -->
+      <ul class="hero__stats reveal" style="--d:.65s">
+        <li class="stat">
+          <span class="stat__num">2026</span>
+          <span class="stat__label">北交大 211 硕士</span>
+          <span class="stat__sub">网络信息安全</span>
+        </li>
+        <li class="stat">
+          <span class="stat__num">3.87<span class="stat__num-small">/5.0</span></span>
+          <span class="stat__label">GPA · 专业前 15%</span>
+          <span class="stat__sub">江西财经大学 · 软件工程</span>
+        </li>
+        <li class="stat">
+          <span class="stat__num">CET-6</span>
+          <span class="stat__label">英语水平</span>
+          <span class="stat__sub">可流畅阅读英文技术文档</span>
+        </li>
+        <li class="stat">
+          <span class="stat__num">60%<span class="stat__num-small">↓</span></span>
+          <span class="stat__label">测试用例开发耗时</span>
+          <span class="stat__sub">PFU 自动化框架 · 落地成果</span>
+        </li>
+      </ul>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="向下滚动">
+      <span class="hero__scroll-text">SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT (简介) ============ -->
+  <section class="section about" id="about">
+    <div class="section__head">
+      <span class="section__num">01</span>
+      <h2 class="section__title">About</h2>
+      <span class="section__kicker">关于我</span>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__lede">
+        <p class="about__hi">你好，我是王德才。</p>
+        <p>
+          一名相信<span class="hl">「架构是写给人看的，顺便让机器执行」</span>的后端工程师。
+          本科毕业于江西财经大学软件工程，即将于 2026 年进入
+          <span class="hl">北京交通大学（211）</span>攻读网络信息安全硕士，
+          现就职于 PFU 上海计算机有限公司。
+        </p>
+        <p>
+          过去两年我在企业级扫描软件 PSC 项目中主导了全量自动化回归测试框架的设计与落地，
+          覆盖 3 种产品模式、10+ 核心模块，让新增用例开发耗时降低 60%。
+          日常深度使用 <span class="hl">Claude Code / Codex</span> 辅助开发，
+          对 Prompt 上下文驱动的代码生成与重构工作流有系统化实践。
+        </p>
+      </div>
+
+      <aside class="about__card">
+        <div class="about__card-row">
+          <span class="about__card-key">Name</span>
+          <span class="about__card-val">王德才 · Wang Decai</span>
+        </div>
+        <div class="about__card-row">
+          <span class="about__card-key">Role</span>
+          <span class="about__card-val">Software Engineer</span>
+        </div>
+        <div class="about__card-row">
+          <span class="about__card-key">Focus</span>
+          <span class="about__card-val">Backend · Distributed Data</span>
+        </div>
+        <div class="about__card-row">
+          <span class="about__card-key">From</span>
+          <span class="about__card-val">Shanghai, China</span>
+        </div>
+        <div class="about__card-row">
+          <span class="about__card-key">Status</span>
+          <span class="about__card-val about__card-val--dot">
+            <span class="dot"></span>Open to opportunities
+          </span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section education" id="education">
+    <div class="section__head">
+      <span class="section__num">02</span>
+      <h2 class="section__title">Education</h2>
+      <span class="section__kicker">教育背景</span>
+    </div>
+
+    <div class="timeline">
+      <article class="tl-item">
+        <div class="tl-item__year">
+          <span class="tl-item__year-num">2026</span>
+          <span class="tl-item__year-range">09 · 2026 — 07 · 2029</span>
+        </div>
+        <div class="tl-item__body">
+          <h3 class="tl-item__school">北京交通大学 <span class="tl-item__badge">211</span></h3>
+          <p class="tl-item__major">网络信息安全 · 硕士</p>
+          <ul class="tl-item__points">
+            <li>研究方向：网络与系统安全，衔接企业级渗透测试与漏洞挖掘实践</li>
+            <li>聚焦分布式系统数据一致性、协议安全与可信执行</li>
+          </ul>
+        </div>
+        <span class="tl-item__num">M.</span>
+      </article>
+
+      <article class="tl-item tl-item--alt">
+        <div class="tl-item__year">
+          <span class="tl-item__year-num">2020</span>
+          <span class="tl-item__year-range">09 · 2020 — 07 · 2024</span>
+        </div>
+        <div class="tl-item__body">
+          <h3 class="tl-item__school">江西财经大学</h3>
+          <p class="tl-item__major">软件工程 · 本科</p>
+          <div class="tl-item__grades">
+            <div class="grade">
+              <span class="grade__label">GPA</span>
+              <span class="grade__value">3.87<span class="grade__value-small">/5.0</span></span>
+              <span class="grade__note">专业排名前 15%</span>
+            </div>
+            <div class="grade">
+              <span class="grade__label">英语</span>
+              <span class="grade__value">CET-6</span>
+              <span class="grade__note">阅读 / 写作流利</span>
+            </div>
+          </div>
+          <div class="tl-item__courses">
+            <span class="tl-item__courses-title">核心课程成绩</span>
+            <ul class="course-tags">
+              <li>数据结构 <b>92</b></li>
+              <li>计算机网络 <b>96</b></li>
+              <li>数据库系统原理 <b>96</b></li>
+              <li>Web 应用开发 <b>92</b></li>
+            </ul>
+          </div>
+        </div>
+        <span class="tl-item__num">B.</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <div class="section__head">
+      <span class="section__num">03</span>
+      <h2 class="section__title">Experience</h2>
+      <span class="section__kicker">工作经历</span>
+    </div>
+
+    <article class="job">
+      <header class="job__head">
+        <div>
+          <h3 class="job__company">PFU 上海计算机有限公司</h3>
+          <p class="job__role">Software Engineer · 软件工程师</p>
+        </div>
+        <div class="job__meta">
+          <span class="job__period">2024.07 — 2026.03</span>
+          <span class="job__loc">Shanghai</span>
+        </div>
+      </header>
+
+      <p class="job__intro">
+        就职于企业级扫描软件 <span class="hl">PSC</span> 项目组，
+        主导全量自动化回归测试框架从 0 到 1 的设计与落地，
+        并参与 WPF 客户端界面开发；日常深度使用 AI 辅助编程工作流。
+      </p>
+
+      <ol class="job__achievements">
+        <li class="ach">
+          <span class="ach__num">01</span>
+          <div class="ach__body">
+            <p class="ach__text">
+              设计并实现 PSC 全量自动化回归测试框架，覆盖 <span class="hl">3 种产品模式 · 10+ 核心模块</span>，
+              封装 <span class="hl">40+ 可复用公共方法库</span>，
+              <span class="ach__metric">新增用例开发耗时降低 60%</span>。
+            </p>
+            <span class="ach__tag">Framework · 自动化测试</span>
+          </div>
+        </li>
+        <li class="ach">
+          <span class="ach__num">02</span>
+          <div class="ach__body">
+            <p class="ach__text">
+              设计 <span class="hl">CSV 驱动的多语言数据层</span>，支持 10+ 种语言界面文字校验，
+              <span class="ach__metric">适配成本降低 80%</span>；
+              开发图形化配置界面，使非技术人员可独立执行测试，
+              <span class="ach__metric">团队测试人力占用减少 50%</span>。
+            </p>
+            <span class="ach__tag">i18n · Tooling</span>
+          </div>
+        </li>
+        <li class="ach">
+          <span class="ach__num">03</span>
+          <div class="ach__body">
+            <p class="ach__text">
+              参与 WPF 客户端界面开发，基于 <span class="hl">MVVM</span> 完成参数配置、状态提示等 5+ 核心界面，
+              熟悉事件驱动架构与数据绑定模式。
+            </p>
+            <span class="ach__tag">WPF · XAML · MVVM</span>
+          </div>
+        </li>
+        <li class="ach">
+          <span class="ach__num">04</span>
+          <div class="ach__body">
+            <p class="ach__text">
+              日常使用 <span class="hl">Claude Code / Codex</span> 辅助开发，
+              熟练构建 Prompt 上下文驱动代码生成与重构，
+              对 <span class="hl">AI 辅助编程工作流</span>有深度实践。
+            </p>
+            <span class="ach__tag">AI · Developer Workflow</span>
+          </div>
+        </li>
+      </ol>
+    </article>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="section__head">
+      <span class="section__num">04</span>
+      <h2 class="section__title">Selected Work</h2>
+      <span class="section__kicker">项目展示</span>
+    </div>
+
+    <article class="project">
+      <div class="project__top">
+        <span class="project__index">PROJ · 01</span>
+        <span class="project__period">2024.02 — 2024.06 · 5 months</span>
+      </div>
+
+      <h3 class="project__title">
+        在线学习视频平台 <span class="project__title-sub">— Full-Stack Build</span>
+      </h3>
+      <p class="project__intro">
+        一个覆盖用户中心、视频内容展示、互动功能、搜索发现与后台管理的全栈在线学习视频平台，
+        涵盖注册登录、视频分片上传、评论弹幕、点赞投币、关注粉丝、播放统计、搜索热词、
+        视频推荐、内容审核与统计分析等核心业务场景。
+      </p>
+
+      <div class="project__stack">
+        <span class="stack-label">技术栈</span>
+        <ul class="stack-tags">
+          <li>Spring Boot</li>
+          <li>MyBatis</li>
+          <li>Redis</li>
+          <li>Elasticsearch</li>
+          <li>Vue</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+
+      <div class="project__grid">
+        <!-- 我负责的内容 -->
+        <div class="project__block">
+          <h4 class="project__block-title">
+            <span class="project__block-num">A.</span>
+            我负责的内容
+          </h4>
+          <ul class="project__list">
+            <li>用户注册登录、Token 生成与校验、关注/粉丝、个人资料编辑</li>
+            <li>视频详情查询、视频列表分页、推荐视频、分类筛选、热门视频接口</li>
+            <li>ES 索引创建、视频文档同步、搜索高亮、排序及分页实现</li>
+            <li>视频上传状态管理、分片信息记录、上传完成后的入库与队列写入</li>
+            <li>播放量、评论量、粉丝量、点赞量的日统计汇总</li>
+          </ul>
+        </div>
+
+        <!-- 项目难点 -->
+        <div class="project__block project__block--alt">
+          <h4 class="project__block-title">
+            <span class="project__block-num">B.</span>
+            项目难点突破
+          </h4>
+          <ul class="project__list project__list--numbered">
+            <li>
+              <span class="proj-num">01</span>
+              <div>
+                <strong>大文件分片上传一致性</strong>
+                <p>通过 Redis 保存上传状态与分片索引，解决多次断点续传导致的重复上传与状态丢失，提升上传成功率与用户体验。</p>
+              </div>
+            </li>
+            <li>
+              <span class="proj-num">02</span>
+              <div>
+                <strong>用户登录态安全</strong>
+                <p>通过 Redis 存储 Token 与过期时间，配合校验机制实现登录态续期与失效管理，保障登录状态一致性与安全性。</p>
+              </div>
+            </li>
+            <li>
+              <span class="proj-num">03</span>
+              <div>
+                <strong>视频搜索性能瓶颈</strong>
+                <p>使用 Elasticsearch 构建视频全文索引，通过 IK 分词和字段映射优化搜索效果，提升命中率与响应速度，支持海量内容检索。</p>
+              </div>
+            </li>
+            <li>
+              <span class="proj-num">04</span>
+              <div>
+                <strong>关注/粉丝数据一致性</strong>
+                <p>在关注、取消关注、粉丝计数等关键操作中统一使用事务与业务校验，避免数据不一致导致粉丝数错误与页面状态异常。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="section__head">
+      <span class="section__num">05</span>
+      <h2 class="section__title">Stack</h2>
+      <span class="section__kicker">技能特长</span>
+    </div>
+
+    <div class="skills__grid">
+      <article class="skill-card">
+        <header class="skill-card__head">
+          <span class="skill-card__num">01</span>
+          <h3 class="skill-card__title">后端开发</h3>
+        </header>
+        <ul class="skill-list">
+          <li class="skill-item" data-level="92">
+            <div class="skill-item__row">
+              <span class="skill-item__name">Java</span>
+              <span class="skill-item__pct">精通</span>
+            </div>
+            <p class="skill-item__desc">集合 · 并发 · JVM 调优基础</p>
+          </li>
+          <li class="skill-item" data-level="80">
+            <div class="skill-item__row">
+              <span class="skill-item__name">Spring Boot</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">框架原理 · 事务管理</p>
+          </li>
+          <li class="skill-item" data-level="78">
+            <div class="skill-item__row">
+              <span class="skill-item__name">MyBatis</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">ORM · 动态 SQL</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <header class="skill-card__head">
+          <span class="skill-card__num">02</span>
+          <h3 class="skill-card__title">数据存储</h3>
+        </header>
+        <ul class="skill-list">
+          <li class="skill-item" data-level="82">
+            <div class="skill-item__row">
+              <span class="skill-item__name">MySQL</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">索引优化 · 事务隔离 · 慢查询分析</p>
+          </li>
+          <li class="skill-item" data-level="80">
+            <div class="skill-item__row">
+              <span class="skill-item__name">Redis</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">缓存穿透/雪崩 · 持久化 · 分布式锁</p>
+          </li>
+          <li class="skill-item" data-level="68">
+            <div class="skill-item__row">
+              <span class="skill-item__name">Elasticsearch</span>
+              <span class="skill-item__pct">实践</span>
+            </div>
+            <p class="skill-item__desc">全文索引 · IK 分词 · 字段映射</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <header class="skill-card__head">
+          <span class="skill-card__num">03</span>
+          <h3 class="skill-card__title">网络基础</h3>
+        </header>
+        <ul class="skill-list">
+          <li class="skill-item" data-level="82">
+            <div class="skill-item__row">
+              <span class="skill-item__name">TCP / IP</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">分层模型 · 拥塞控制 · 抓包分析</p>
+          </li>
+          <li class="skill-item" data-level="80">
+            <div class="skill-item__row">
+              <span class="skill-item__name">HTTP</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">协议语义 · 缓存 · 鉴权</p>
+          </li>
+          <li class="skill-item" data-level="72">
+            <div class="skill-item__row">
+              <span class="skill-item__name">协议分析</span>
+              <span class="skill-item__pct">实践</span>
+            </div>
+            <p class="skill-item__desc">Wireshark · 抓包排查</p>
+          </li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <header class="skill-card__head">
+          <span class="skill-card__num">04</span>
+          <h3 class="skill-card__title">桌面 / 前端</h3>
+        </header>
+        <ul class="skill-list">
+          <li class="skill-item" data-level="78">
+            <div class="skill-item__row">
+              <span class="skill-item__name">C# · WPF</span>
+              <span class="skill-item__pct">熟悉</span>
+            </div>
+            <p class="skill-item__desc">XAML · MVVM · 事件驱动</p>
+          </li>
+          <li class="skill-item" data-level="72">
+            <div class="skill-item__row">
+              <span class="skill-item__name">Vue</span>
+              <span class="skill-item__pct">实践</span>
+            </div>
+            <p class="skill-item__desc">组件化 · 响应式数据</p>
+          </li>
+          <li class="skill-item" data-level="85">
+            <div class="skill-item__row">
+              <span class="skill-item__name">AI 辅助编程</span>
+              <span class="skill-item__pct">深度实践</span>
+            </div>
+            <p class="skill-item__desc">Claude Code · Codex · Prompt 工程</p>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="contact__inner">
+      <span class="contact__num">06</span>
+      <h2 class="contact__title">
+        Let&rsquo;s<br />
+        <em>build</em> something.
+      </h2>
+      <p class="contact__lede">
+        无论你是想聊聊一个后端岗位的机会，还是想讨论分布式系统、AI 辅助编程工作流，
+        我都乐于交流。简历 PDF 与项目代码可邮件索取。
+      </p>
+
+      <div class="contact__actions">
+        <a href="mailto:1599358835@qq.com" class="btn btn--primary btn--lg">
+          <span>1599358835@qq.com</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:19979924861" class="btn btn--ghost btn--lg">
+          <span>19979924861</span>
+        </a>
+      </div>
+
+      <div class="contact__info">
+        <div><span class="contact__info-key">Name</span><span>王德才</span></div>
+        <div><span class="contact__info-key">Age</span><span>24 · 男 · 硕士</span></div>
+        <div><span class="contact__info-key">Base</span><span>Shanghai / Remote</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <span class="footer__brand">Wang Decai · Portfolio</span>
+    <span class="footer__meta">
+      Built with HTML · CSS · JS — no framework, no build step.
+      <br/>Ready for GitHub Pages / Netlify / Vercel.
+    </span>
+    <span class="footer__year">© 2026</span>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
